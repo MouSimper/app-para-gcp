@@ -112,8 +112,8 @@ def translate_to_english(text):
 
 # =============== Clasificador (CPU) ===============
 DEVICE_CLF = torch.device("cpu")
-BERT_CKPT     = "bert-finetuned-epoch7-acc0.9812"
-ROBERTA_CKPT  = "roberta-finetuned-epoch6-acc0.9812"
+BERT_CKPT     = "Carlo312/bert-finetuned-nfpa"
+ROBERTA_CKPT  = "Carlo312/roberta-finetuned-nfpa"
 LABEL_ENCODER = "label_encoder.pkl"
 MAX_LEN_CLF   = 128
 BEST_W        = 0.50
@@ -979,4 +979,5 @@ if __name__ == "__main__":
         build_and_launch_gradio()
     except Exception as e:
         print("Error lanzando Gradio:", e)
+
         traceback.print_exc(); sys.exit(1)
