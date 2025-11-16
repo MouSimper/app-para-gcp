@@ -78,7 +78,7 @@ else:
 # --- Traductor español → inglés ---
 try:
     print("Cargando traductor Helsinki-NLP...")
-    translator = pipeline("translation", model="Helsinki-NLP/opus-mt-es-en")
+    translator = pipeline("translation", model="Helsinki-NLP/opus-mt-es-en", token=HF_TOKEN)
     print("Traductor cargado.")
 except Exception as e:
     print(f"Error cargando traductor Helsinki: {e}")
@@ -981,3 +981,4 @@ if __name__ == "__main__":
         print("Error lanzando Gradio:", e)
 
         traceback.print_exc(); sys.exit(1)
+
